@@ -1,0 +1,149 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    overflow-x: hidden;
+    background-color: #f1f0f0;
+}
+
+.form-head {
+    margin-top: 60px;
+}
+
+.form-head a {
+    color: #2860cd !important;
+    text-decoration: underline;
+    font-size: 12px;
+    font-weight: 500;
+}
+
+.form-head span {
+    font-size: 20px;
+    font-weight: 600;
+}
+
+.form-head span .text-clay {
+    color: #d49840;
+}
+
+.form-sub h1 {
+    font-size: 25px;
+    font-weight: 600;
+    text-align: center;
+    color: #d49840;
+    margin-top: 50px;
+}
+
+.instruct {
+    color: #000000;
+    font-size: 18px;
+    font-weight: 500;
+}
+
+.btn-primary {
+    background-color: #2860cd !important;
+    width: 100% !important;
+    padding: 10px 0px !important;
+    font-size: 15px;
+    font-weight: 500;
+    transition: ease-in-out 0.5s;
+    box-shadow: 0px 30px 20px -10px rgba(40, 96, 205, 0.6) !important;
+}
+
+.btn-primary:hover {
+    transform: translateY(5px);
+}
+
+.log-instruct {
+    margin-top: 20px;
+}
+
+.log-instruct span {
+    color: #000000;
+    font-size: 12px;
+    font-weight: 500;
+}
+
+.log-instruct span a {
+    color: #2860cd;
+}
+
+input {
+    border: none !important;
+    box-shadow: none !important;
+}
+
+.bg-form-right {
+    background-color: #fff;
+    border-radius: 50px 0px 0px 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.error-border {
+    border: 2px solid red !important;
+}
+
+.success-border {
+    border: 2px solid green !important;
+}
+
+.error-message {
+    color: red;
+    font-size: 13px;
+    font-weight: 600;
+}
+
+.load {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    backdrop-filter: blur(2px);
+    background-color: rgba(0, 0, 0, 0.7);
+}
+
+.load-content {
+    border: 10px solid #fff;
+    border-top: 10px solid #C4C4C4;
+    border-radius: 50%;
+    margin: 15% auto;
+    width: 100px;
+    height: 100px;
+    animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+    0% {
+        transform: rotate(0deg);
+        opacity: 100%;
+       
+    }
+
+    100% {
+        transform: rotate(360deg);
+        opacity: 100%;
+    }
+}
+
+@media only screen and (max-width: 600px) {
+    .load-content {
+        border: 10px solid #fff;
+        border-top: 10px solid #C4C4C4;
+        border-radius: 50%;
+        margin: 60% auto;
+        width: 100px;
+        height: 100px;
+        animation: spin 1s linear infinite;
+    }
+    
+}
