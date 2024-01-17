@@ -147,7 +147,7 @@ function validateForm(e) {
             phoneNumber.value = "";
             password.value = "";
             comfirmPassword.value = "";
-            window.location.href = "../profile/profile.html"
+            window.location.href = "./profile/profile.html"
         }, 3000);
     }
 
@@ -155,32 +155,3 @@ function validateForm(e) {
 }
 
 submitForm.addEventListener("submit", validateForm);
-
-
-// for (let p = 1; p < 3; p++) {
-//     let passwordHide = document.getElementsByClassName(`hidep${p}`)[0];
-//     let passwordShow = document.getElementsByClassName(`showp${p}`)[0];
-//     let passwordText = document.getElementsByClassName(`password${p}`)[0];
-
-//     passwordHide.addEventListener("click", function () {
-//         passwordHide.style.display = "none";
-//         passwordShow.style.display = "unset";
-//         if (passwordText.type === "password") {
-//             passwordText.type = "text";
-
-//         } else {
-//             passwordText.type = "password";
-//         }
-//     })
-
-//     passwordShow.addEventListener("click", function () {
-//         passwordShow.style.display = "none";
-//         passwordHide.style.display = "unset";
-//         if (passwordText.type === "text") {
-//             passwordText.type = "password";
-
-//         } else {
-//             passwordText.type = "text";
-//         }
-//     })
-// }
