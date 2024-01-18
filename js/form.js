@@ -5,8 +5,7 @@ const phoneNumber = document.getElementById("phoneNumber");
 const password = document.getElementById("password");
 const comfirmPassword = document.getElementById("comfirmPassword");
 
-//firstName validation.
-function firstnameValidation(firstname, event) {
+function fullnameValidation(firstname, event) {
     if (firstname.value === "") {
         firstname.nextElementSibling.innerHTML = "Please enter your First Name !";
         firstname.classList.add("lineShake")
@@ -17,22 +16,6 @@ function firstnameValidation(firstname, event) {
         firstname.nextElementSibling.innerHTML = "";
         firstname.classList.remove("error-border");
         firstname.classList.add("success-border");
-        return true;
-    }
-}
-
-//lastName validation.
-function lastnameValidation(lastname, event) {
-    if (lastname.value === "") {
-        lastname.nextElementSibling.innerHTML = "Please enter your Last Name !";
-        lastname.classList.add("lineShake")
-        lastname.classList.add("error-border");
-        event.preventDefault();
-        return false;
-    } else {
-        lastname.nextElementSibling.innerHTML = "";
-        lastname.classList.remove("error-border");
-        lastname.classList.add("success-border");
         return true;
     }
 }
@@ -59,7 +42,6 @@ function emailValidation(email, event) {
     }
 }
 
-//phoneNumber validation.
 function phonenumberValidation(number, event) {
     let PNRegex = /^(?:\+?234|0)[1-9]\d{9}$/;
     if (number.value === "") {
@@ -128,7 +110,7 @@ function comfirmpasswordValidation(comfirmpassword, event) {
 function validateForm(e) {
     e.preventDefault();
 
-    let validFirstName = firstnameValidation(fname, e);
+    let validFullName = fullnameValidation(fname, e);
     let validEmail = emailValidation(email, e);
     let validPhoneNumber = phonenumberValidation(phoneNumber, e);
     let validPassword = passwordValidation(password, e);
@@ -136,7 +118,7 @@ function validateForm(e) {
 
     let loader = document.querySelector(".load")
 
-    if (validFirstName && validEmail && validPhoneNumber && validPassword && validComfirmPassword) {
+    if (validFullName && validEmail && validPhoneNumber && validPassword && validComfirmPassword) {
         localStorage.setItem('savedFullName', fname.value);
         localStorage.setItem('savedEmail', email.value);
         localStorage.setItem('savedPhoneNumber', phoneNumber.value);
